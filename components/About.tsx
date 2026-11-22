@@ -23,7 +23,7 @@ export default function About({ t }: { t: Content }) {
                 <div key={s.label} className="py-6 text-center">
                   <dt className="sr-only">{s.label}</dt>
                   <dd className="font-display text-4xl font-semibold tracking-[-0.03em] text-taupe md:text-5xl">{s.value}</dd>
-                  <dd className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted">{s.label}</dd>
+                  <dd className="mt-1 px-1 text-[0.625rem] font-semibold uppercase tracking-[0.08em] text-muted sm:text-xs sm:tracking-[0.2em] lg:text-[0.7rem] lg:tracking-[0.12em] xl:text-xs xl:tracking-[0.2em]">{s.label}</dd>
                 </div>
               ))}
             </dl>
