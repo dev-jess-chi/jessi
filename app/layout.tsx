@@ -13,6 +13,8 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
+  // Sin indexar en Google hasta que la web esté aprobada. Para publicarla en buscadores, borra esta línea.
+  robots: { index: false, follow: false },
   title: "Jessica Chicaiza · Administrative Assistant",
   description:
     "Administrative assistant with experience in front office, event organisation, document management and financial administration. Currently a trainee at the European Parliament in Luxembourg.",
