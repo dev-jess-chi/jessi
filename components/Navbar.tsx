@@ -30,8 +30,9 @@ export default function Navbar({ t, lang }: Props) {
   ];
 
   return (
+    <>
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-500 ${
         scrolled && !open ? "bg-cream/85 shadow-[0_1px_0_0_var(--color-line)] backdrop-blur-md" : ""
       }`}
     >
@@ -75,8 +76,9 @@ export default function Navbar({ t, lang }: Props) {
           </button>
         </div>
       </nav>
+    </header>
 
-      {/* Menú móvil */}
+      {/* Menú móvil: fuera del header para que el blur del header no lo recorte al abrir con scroll */}
       <div
         className={`fixed inset-0 z-40 bg-sand transition-[clip-path] duration-700 ease-[cubic-bezier(.7,0,.2,1)] lg:hidden ${
           open ? "[clip-path:inset(0_0_0_0)]" : "pointer-events-none [clip-path:inset(0_0_100%_0)]"
@@ -101,7 +103,7 @@ export default function Navbar({ t, lang }: Props) {
           ))}
         </ul>
       </div>
-    </header>
+    </>
   );
 }
 
